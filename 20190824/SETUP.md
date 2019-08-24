@@ -21,3 +21,13 @@ Market > python, Korean Language pack
 git add .
 git commit -m "message"
 git push
+
+- pip install jupyter
+- jupyter notebook or 아나콘다 jupyter notebook 실행
+- new > pytho3 > 코드 > shift enter
+
+>>> import keyword
+>>> print(keyword.kwlist)
+
+no module name ''
+-> pip로 설치해야함
