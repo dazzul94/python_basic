@@ -1,3 +1,7 @@
+'''
+크롤링 예제
+'''
+
 from bs4 import BeautifulSoup
 
 import urllib.request as req
