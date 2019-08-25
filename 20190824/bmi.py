@@ -19,7 +19,7 @@ elif 18.5 <= bmi < 25.0:
 elif 25.0 <= bmi < 30:
     print("당신은 과체중입니다.")
 elif 30 <= bmi:
-    print("당신은 과체중입니다.")
+    print("당신은 비만입니다.")
 else:
     print("Error") 
 
