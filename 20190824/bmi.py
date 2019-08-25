@@ -4,17 +4,22 @@
 '''
 
 height = int(input("키를 입력해주세요.> "))
-print("height==", height / 100)
+height = height / 100 #cm를 m로 변환
 
 weight = float(input("몸무게를 입력해주세요.> "))
-print("weight==", weight)
 
-bmi = weight / height * height / 100
-print("bmi==", bmi)
+bmi = weight / ( height * height )
+print("당신의 BMI지수는 ", bmi, "입니다.")
 
 
-'''
-if True:
-    print("트루!")
-'''
+if bmi < 18.5:
+    print("당신은 저체중입니다.")
+elif 18.5 <= bmi < 25.0:
+    print("당신은 정상체중입니다.")
+elif 25.0 <= bmi < 30:
+    print("당신은 과체중입니다.")
+elif 30 <= bmi:
+    print("당신은 과체중입니다.")
+else:
+    print("Error") 
 
