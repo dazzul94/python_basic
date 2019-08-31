@@ -100,13 +100,19 @@ search_words = ['이천 반도체', '이천 쌀', '이천 도자기', '이천 �
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open_new(url + word)  
 >&nbsp;&nbsp;&nbsp;&nbsp;i += 1
 
-## - 제어문
+### - 제어문
 - 조건문: if
 1. if
 2. if ~ else
 3. if ~ elif ~ else
 
 - 반복문: for, while
+
+### - 문자열 비교시 사전 순서대로 앞에 있는 것이 작은 값을 갖는다.
+1. "가방" == "가방"  True  
+2. "가방" != "하마" False
+3. "가방" > "하마" False
+4. "가방" < "하마" True
 
 
 
