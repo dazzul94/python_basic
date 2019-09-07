@@ -7,17 +7,19 @@ for i in range(0, int(people)) :
     plist.append(i + 1)
 print(plist)
 
-bomb_idx = randint(1, int(people))
-interval = randint(1, int(people))
-print('bomb_idx===', bomb_idx)
-print('interval ===', interval)
+# 게임시작위치 선정
+bomb_idx = int(input("게임시작위치를 지정(숫자 0 이상)"))
+# 폭탄 넘기는 간격 선정
+interval = int(input("폭탄 넘기는 간격 지정(숫자)"))
 
 print("===================폭탄돌리기 시작=======================")
 
 while len(plist) != 1 :
     bomb_idx = (bomb_idx + interval) % len(plist)
     plist.pop(bomb_idx)
-    print("pop: ", bomb_idx)
+    print("{}번 참가자가 아웃되었습니다.".format(bomb_idx))
+    bomb_idx -= 1
+print("최종생존자는 {}번 참가자입니다.").format(plist[bomb_idx])
     
 
 
