@@ -1,5 +1,6 @@
 '''
 테이블 검색 및 결과물을 CSV 파일로 출력하기
+아규먼트[2]로 명령어에서 받아오기
 '''
 #!/usr/bin/env python3 
 import csv 
