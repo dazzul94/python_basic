@@ -128,7 +128,8 @@ mariadb> CREATE TABLE IF NOT EXISTS Suppliers
 ~~~
 
 ### - Jupyter notebook
-실행: Shift + Enter
+* 실행: Shift + Enter
+* jupyter notebook에서 pip install 하려면 느낌표 붙여주면 된다.
 ~~~
 cmd> pip install jupyter
 cmd> python -m pip install --upgrade pip
