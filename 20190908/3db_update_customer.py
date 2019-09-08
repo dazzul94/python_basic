@@ -35,7 +35,7 @@ for row in file_reader:
    data = []
    for column_index in range(len(header)):
       data.append(row[column_index])
-   print(data)
+   # print(data)
    con.execute("UPDATE sales SET amount=?, date=? WHERE customer=?;", data)
 con.commit()
 
@@ -48,15 +48,11 @@ for row in rows:
       output.append(str(row[column_index]))
    print(output)
 
-# cmd> python 2db_update_customer.py data_for_updating.csv
+# cmd> python 3db_update_customer.py data_for_updating.csv
 
 '''
-['4.25', '5/11/2014', 'Richard Lucas']
-['6.75', '5/12/2014', 'Jenny Kim']
 ['Richard Lucas', 'Notepad', '4.25', '5/11/2014']
 ['Jenny Kim', 'Binder', '6.75', '5/12/2014']
 ['Svetlana Crow', 'Printer', '155.75', '2019-02-03']
 ['Stephen Randolph', 'Computer', '679.4', '2019-02-20']
-
-***** 업데이트가 안됐음 --> 다시보기 *******
 '''
