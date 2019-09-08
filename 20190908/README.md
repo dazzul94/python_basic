@@ -26,12 +26,12 @@ DockerToolbox-19.03.1.exe 다운로드
     * COMMIT (적용)
     * ROLLBACK (실행취소)
 
-### 설정
+### - 설정
 ~~~
 SHOW VARIABLES LIKE 'C%';
 ~~~
 
-### 사용자 계정 생성하기 
+### - 사용자 계정 생성하기 
 * user1(localhost), user2(%), user3(localhost), user4(%)
 
 * 데이터베이스 서버에 접속할 수 있는 지역 설정  
@@ -48,6 +48,63 @@ Mariadb> CREATE USER 'user4'@'%' IDENTIFIED BY 'user4';
 Mariadb> DROP USER 'user4'@'%';
 
 Mariadb> SELECT HOST, USER, PASSWORD FROM MYSQL.USER WHERE USER='user1'
+~~~
+
+### - 만들어진 사용자 계정에 권한주기
+~~~
+Mariadb> GRANT ALL PRIVILEGES ON sample.* to 'user1'@'localhost' IDENTIFIED BY 'user1';
+Mariadb> GRANT ALL PRIVILEGES ON sample.* to 'user3'@'localhost' IDENTIFIED BY 'user3';
+
+Mariadb> GRANT ALL PRIVILEGES ON employees.* to 'user2'@'localhost' IDENTIFIED BY 'user2';
+Mariadb> GRANT ALL PRIVILEGES ON employees.* to 'user4'@'localhost' IDENTIFIED BY 'user4';
+~~~
+
+### - 클라이언트 프로그램으로 database 만들기
+~~~
+mysqladmin.exe -u root -p create white
+mysqladmin.exe -u root -p drop white
+~~~
+
+### - 테이블생성, 테이블삭제
+~~~
+Mariadb> CREATE DATABASE shopdb;
+Mariadb> DROP DATABASE shopdb;
+
+Mariadb> use shopdb;
+Mariadb> SHOW TABLES;
+~~~
+
+## - 쇼핑몰 DB
+* 고객ID : 중복X
+* 고객이름
+* 고객전화
+* 고객주소
+~~~
+Mariadb> CREATE TABLE memberTBL (
+    memberID VARCHAR(8) NULL,
+    memberName VARCHAR(6) NULL,
+    memberPhone VARCHAR(13) NOT NULL,
+    memberAddress VARCHAR(30) NOT NULL);
+
+Mariadb> DROP TABLE memberTBL;
+Mariadb> DESCRIBE memberTBL;
+Mariadb> DESC memberTBL;
+~~~
+
+### - 데이터 입력
+
+~~~
+Mariadb> INSERT INTO memberTBL(memberID, memberName, memberPhone, memberAddress) VALUES('1000','KIM','010-1234-5678','SEOUL');
+Mariadb> INSERT INTO memberTBL VALUES('1000','KIM','010-1234-5678','SEOUL');
+
+Mariadb> SELECT * FROM memberTBL;
+Mariadb> SELECT memberID, memberName, memberPhone FROM memberTBL;
+~~~
+
+### - 테이블 변경
+~~~
+Mariadb> ALTER TABLE memberTBL MODIFY memberID INT;
+Mariadb> ALTER TABLE memberTBL MODIFY memberID VARCHAR(8);
 ~~~
 
 
