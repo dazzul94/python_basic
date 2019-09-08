@@ -1,3 +1,6 @@
+'''
+테이블에 새 레코드 입력하기
+'''
 #!/usr/bin/env python3 
 import csv 
 import MySQLdb 
