@@ -108,6 +108,10 @@ Mariadb> ALTER TABLE memberTBL MODIFY memberID VARCHAR(8);
 ~~~
 
 ### - csv 실습
+1. 엑셀로 만들기 -> 저장할때 csv로 저장
+2. 메모장으로 만들기 -> 모든 파일로 저장
+
+* csv(콤마로), tsv(탭으로), ssv(스페이스바로) 
 
 
 

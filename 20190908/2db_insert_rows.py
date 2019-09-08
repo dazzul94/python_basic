@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import csv
 import sqlite3
 import sys
@@ -34,3 +35,4 @@ for row in rows:
     print(output)
 
 # 2db_insert_rows
+# cmd> python 2db_insert_rows.py suppliers_data.csv
