@@ -142,7 +142,12 @@ jupyter notebook> !pip install xlsxwriter
 jupyter notebook> !pip install matplotlib
 
 jupyter notebook> pip list
+jupyter notebook> %pwd
 ~~~
+
+### - 주피터에서 pandas로 엑셀파일 이쁘게 보기
+
+![ex_screenshot](20190908_161924.png)
 
 
 
