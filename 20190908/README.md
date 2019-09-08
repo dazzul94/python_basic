@@ -61,8 +61,8 @@ Mariadb> GRANT ALL PRIVILEGES ON employees.* to 'user4'@'localhost' IDENTIFIED B
 
 ### - 클라이언트 프로그램으로 database 만들기
 ~~~
-mysqladmin.exe -u root -p create white
-mysqladmin.exe -u root -p drop white
+cmd> mysqladmin.exe -u root -p create white
+cmd> mysqladmin.exe -u root -p drop white
 ~~~
 
 ### - 테이블생성, 테이블삭제
@@ -106,6 +106,9 @@ Mariadb> SELECT memberID, memberName, memberPhone FROM memberTBL;
 Mariadb> ALTER TABLE memberTBL MODIFY memberID INT;
 Mariadb> ALTER TABLE memberTBL MODIFY memberID VARCHAR(8);
 ~~~
+
+### - csv 실습
+
 
 
 
