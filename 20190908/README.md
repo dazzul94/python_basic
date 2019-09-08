@@ -127,6 +127,21 @@ mariadb> CREATE TABLE IF NOT EXISTS Suppliers
             Purchase_Date DATE);
 ~~~
 
+### - Jupyter notebook
+실행: Shift + Enter
+~~~
+cmd> pip install jupyter
+cmd> python -m pip install --upgrade pip
+
+cmd> jupyter notebook
+
+jupyter notebook> !pip install pandas
+jupyter notebook> !pip install xlrd
+jupyter notebook> !pip install xlsxwriter
+jupyter notebook> !pip install matplotlib
+
+jupyter notebook> pip list
+~~~
 
 
 

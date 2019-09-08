@@ -34,4 +34,5 @@ for row in rows:
     for column_index in range(len(row)):   
         output.append(str(row[column_index]))  
         # print(output) 
+        
 # cmd> python 6db_mysql_update_from_csv.py  data_for_updating_6mysql.csv
