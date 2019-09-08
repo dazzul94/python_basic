@@ -113,6 +113,14 @@ Mariadb> ALTER TABLE memberTBL MODIFY memberID VARCHAR(8);
 
 * csv(콤마로), tsv(탭으로), ssv(스페이스바로) 
 
+unresolved import 'sys'
+### - mysql 접속
+~~~
+cmd> pip install mysqlclient
+
+mariadb> CREATE DATABASE my_suppliers;
+~~~
+
 
 
 

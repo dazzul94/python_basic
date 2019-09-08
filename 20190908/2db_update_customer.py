@@ -22,8 +22,8 @@ data = [('Richard Lucas', 'Notepad', 2.50, '2019-01-02'),
       ('Jenny Kim', 'Binder', 4.15, '2019-01-15'),
       ('Svetlana Crow', 'Printer', 155.75, '2019-02-03'),
       ('Stephen Randolph', 'Computer', 679.40, '2019-02-20')]
-for tuple in data:
-   print(tuple)
+# for tuple in data:
+   # print(tuple)
 statement = "INSERT INTO sales VALUES(?, ?, ?, ?)"
 con.executemany(statement, data)
 con.commit()
@@ -49,3 +49,14 @@ for row in rows:
    print(output)
 
 # cmd> python 2db_update_customer.py data_for_updating.csv
+
+'''
+['4.25', '5/11/2014', 'Richard Lucas']
+['6.75', '5/12/2014', 'Jenny Kim']
+['Richard Lucas', 'Notepad', '4.25', '5/11/2014']
+['Jenny Kim', 'Binder', '6.75', '5/12/2014']
+['Svetlana Crow', 'Printer', '155.75', '2019-02-03']
+['Stephen Randolph', 'Computer', '679.4', '2019-02-20']
+
+***** 업데이트가 안됐음 --> 다시보기 *******
+'''
