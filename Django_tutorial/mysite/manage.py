@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# GitHub\python_basic\Django_tutorial\mysite> python manage.py runserver
+# user1/1111
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
