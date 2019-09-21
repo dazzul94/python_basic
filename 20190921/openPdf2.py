@@ -14,3 +14,4 @@ print("=============================================")
 pageObj = pdfReader.getPage(0)
 print(pageObj.extractText())
 
+# cmd> python openPdf2.py
