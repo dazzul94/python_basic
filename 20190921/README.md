@@ -2,4 +2,10 @@
 
 ### - 영문 노래가사 3곡을 txt파일로 저장
 
-### - 람다 함수
+### - PDF 다루기
+~~~
+pip install PyPDF2
+pip install textract
+pip install nltk
+pip install pdfminer3k
+~~~
