@@ -25,3 +25,6 @@ def hello():
                 )
         output += "<hr/>"
     return output
+
+# cmd> set FLASK_APP=flask_weather.py
+# cmd> flask run
