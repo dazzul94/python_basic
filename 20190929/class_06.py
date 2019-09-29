@@ -1,5 +1,3 @@
-# 클래스(붕어빵틀) => 객체(붕어빵)
-
 # 클래스 선언
 class Circle:
     # 생성자
@@ -11,3 +9,8 @@ class Circle:
 
     def calcArea(self):
         return self.radius * self.radius * 3.14
+
+circle = Circle(100)
+print("반지름: ", circle.radius,
+    "원의 면적: ", circle.calcArea(),
+    "원의 둘레: ", circle.calcPerimeter()   )
