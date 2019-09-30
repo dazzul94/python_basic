@@ -2,6 +2,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views.generic import ListView, DetailView
+
+# import the logging library
+import logging
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
 # from django.template import loader
 # from django.http import Http404
 
@@ -24,6 +30,7 @@ class ResultsView(DetailView):
     template_name = 'polls/results.html'
 
 def vote(request, question_id):
+    logger.debug('vote().question.id = {}'.format(question_id))
     # return HttpResponse("You're voting on question %s" %question_id)
     question = get_object_or_404(Question, pk=question_id)
     try: 
