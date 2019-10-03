@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',  # polls 앱에 대한 클래스 참조
+    'pets.apps.PetsConfig',  # pet 앱에 대한 클래스 참조
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
