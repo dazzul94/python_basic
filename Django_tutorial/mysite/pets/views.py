@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from .form import PetForm
 from django.http import HttpResponseRedirect,HttpResponse
+from django.template import loader
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the pets index.")
+    template = loader.get_template('pets/index.html') # template 폴더에서 가져온다
+    context = {
+        'owner': 'suji'
+    }
+    return HttpResponse(template.render(context, request))
 '''   
 def get_name(request):
     # POST로 폼데이터를 입력받을 때
