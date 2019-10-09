@@ -32,15 +32,20 @@ while True:
     elif gd == 3:
         dan = 2000
 
-    if ti > 50:
-        ti = 50
-
-    if ti > 36:
-        # 초과근무시간에 대해 시급의 1.5배
-        wamt = (ti - 36) * dan
+    oti = 0
+    if ti < 36:
+        # 36초과 근무시간 없을때
+        oti = 0
+    elif ti < 50:
+        # 36초과 근무시간 있을 때의 그 시간
+        oti = ti - 36
     else:
-        wamt = ti * dan
-
+        # 36초과 근무시간 있을 때 50시간이 초과되고 남은 시간은 14시간(50-36)
+        oti = 14
+    
+    # 주간급여는 ti * dan 에서 초과근로시간에 해당하는만큼은 0.5배 해준다.
+    wamt = ti * dan + oti * dan * 0.5
+    
     id_count += 1
     wamt_sum += wamt # 주간급여의 총 합
 
